@@ -1,3 +1,6 @@
 [submodule "existek-test"]
 	path = existek-test
 	url = https://github.com/OlenkaVoitsekhivska/existek-test
+[submodule "existek-ecommerce"]
+	path = existek-ecommerce
+	url = https://github.com/OlenkaVoitsekhivska/existek-ecommerce
