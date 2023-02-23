@@ -1,0 +1,20 @@
+<div class="header-container">
+  <mat-toolbar color="primary">
+    <a [routerLink]="['/home']">LOGO</a>
+    <form action="" [formGroup]="searchForm">
+      <label for="search"></label>
+      <input
+        matInput
+        type="search"
+        id="search"
+        formControlName="search"
+        placeholder="Search item..."
+        (input)="updateSearchString()"
+      />
+    </form>
+    <button (click)="logout()" mat-raised-button color="accent" type="submit">
+      <mat-icon fontIcon="logout"></mat-icon>
+      logout
+    </button>
+  </mat-toolbar>
+</div>

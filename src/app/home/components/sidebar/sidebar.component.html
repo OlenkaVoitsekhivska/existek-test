@@ -1,0 +1,23 @@
+<mat-sidenav-container class="example-container" cdkscrollable>
+  <mat-sidenav-content>
+    <h2>Categories</h2>
+    <ul *ngFor="let ctgr of categoriesList">
+      <li>
+        <a [routerLink]="['/home', ctgr]">{{ ctgr | uppercase }}</a>
+      </li>
+    </ul>
+    <mat-divider></mat-divider>
+    <div>
+      <ul id="rangeCheckboxes" *ngFor="let box of checkboxGroup">
+        <li>
+          <mat-checkbox
+            id="{{ box.id }}"
+            class="example-margin"
+            [(ngModel)]="box.checked"
+            ><span>{{ box.range }}</span></mat-checkbox
+          >
+        </li>
+      </ul>
+    </div></mat-sidenav-content
+  >
+</mat-sidenav-container>

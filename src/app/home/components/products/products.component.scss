@@ -1,0 +1,15 @@
+.flex-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .products-container{
+        margin:15px;
+        width: 45%;
+    }
+}
+
+@media (min-width: 900px) {
+    .flex-container{
+        justify-content: space-between;
+    }
+  }

@@ -1,0 +1,17 @@
+<div class="product-card">
+  <mat-card id="{{ productData.Id }}">
+    <mat-card-content>
+      <img
+        src="{{ productData.Image }}"
+        mat-card-image
+        [ngStyle]="{
+          width: '100%',
+          maxHeight: '250px',
+          objectFit: 'contain'
+        }"
+      />
+      <h3>{{ productData.Title }}</h3>
+      <p>{{ productData.Price | currency }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>

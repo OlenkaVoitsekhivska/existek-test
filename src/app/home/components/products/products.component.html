@@ -1,0 +1,18 @@
+<ng-container *ngIf="PRODUCT_RES | async as productResp">
+  <div class="flex-container">
+    <div
+      *ngFor="let product of productResp.Products"
+      class="products-container"
+    >
+      <app-product [productData]="product"></app-product>
+    </div>
+  </div>
+  <div class="paginator" *ngIf="productResp.Products.length > 0">
+    <mat-paginator
+      [length]="productResp.Total"
+      [pageSize]="3"
+      [showFirstLastButtons]="true"
+      (page)="onPageChange($event)"
+    ></mat-paginator>
+  </div>
+</ng-container>
